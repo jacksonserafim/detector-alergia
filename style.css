@@ -1,0 +1,141 @@
+/* style.css */
+
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, Arial, sans-serif;
+}
+
+/* BODY */
+body {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 16px;
+    background-color: #f9f9f9;
+}
+
+/* TÍTULOS E TEXTO MUTED */
+h1, h3, h4 {
+    margin-bottom: 8px;
+}
+
+.muted {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* BOTÕES E INPUTS */
+button, input[type="file"] {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #fff;
+    cursor: pointer;
+    margin-top: 8px;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+/* PREVIEW DA IMAGEM */
+img.preview {
+    max-width: 280px;
+    border: 1px solid #ddd;
+    padding: 6px;
+    border-radius: 6px;
+    background: #fff;
+    display: block;
+    margin-top: 8px;
+}
+
+/* RESULTADOS */
+.found {
+    background: #e8f8ff;
+    border: 1px solid #bfefff;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 8px;
+}
+
+/* Quebrar links longos dentro do resultado */
+#resultArea a {
+    word-break: break-word;      /* Permite quebra dentro de palavras longas */
+    overflow-wrap: anywhere;     /* Força quebra quando necessário */
+    color: #0366d6;
+    text-decoration: none;
+}
+
+#resultArea a:hover {
+    text-decoration: underline;
+}
+
+
+.alert {
+    background: #ffeaea;
+    border: 1px solid #ffb3b3;
+    padding: 8px;
+    border-radius: 6px;
+    margin-top: 6px;
+    color: #b30000;
+}
+
+/* DADOS BRUTOS */
+pre {
+    background: #f6f6f6;
+    padding: 10px;
+    border-radius: 6px;
+    white-space: pre-wrap;
+    max-height: 300px;
+    overflow: auto;
+    margin-top: 6px;
+}
+
+/* LINKS */
+a {
+    color: #0366d6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* MEDIA QUERY PARA SMARTPHONE */
+@media (max-width: 768px) {
+    img.preview {
+        display: none; /* Esconde preview em smartphones */
+    }
+
+    
+    pre {
+        display: none; /* Esconde dados brutos em smartphones */
+    }
+
+    button, input[type="file"] {
+        width: 90%; /* Ajusta largura para telas menores */
+        font-size: 0.9rem;
+    }
+
+    body {
+        padding: 10px;
+    }
+    
+    h3.hide_query {
+        display: none;
+    }
+
+    h4.hide_query {
+        display: none;
+    }
+
+    #resultArea a {
+        word-break: break-word;
+        overflow-wrap: anywhere;
+    }
+}

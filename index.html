@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Leitor de Código de Barras (Quagga2)</title>
+
+<!-- Quagga2 -->
+<script src="https://cdn.jsdelivr.net/npm/@ericblade/quagga2/dist/quagga.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Detector de Alergia</h1>
+  <p class="muted">Selecione uma imagem contendo o código de barras. O sistema detecta o código, consulta bases abertas e compara com a lista de alergênicos.</p>
+
+  <input id="file" type="file" accept="image/*" />
+  <button id="process">Processar</button>
+  <span id="status" class="muted"></span>
+
+  <hr/>
+
+  <h3 class="hide_query">Preview</h3>
+  <img id="imgPreview" class="preview" alt="preview"/>
+
+  <h3>Resultado</h3>
+  <div id="resultArea">—</div>
+
+  <h4 class="hide_query">Detalhes brutos</h4>
+  <pre id="productJson">—</pre>
+
+<script src="script.js"></script>
+</body>
+</html>
