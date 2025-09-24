@@ -13,7 +13,7 @@
   <h1>Detector de Alergia</h1>
   <p class="muted">Selecione uma imagem contendo o código de barras. O sistema detecta o código, consulta bases abertas e compara com a lista de alergênicos.</p>
 
-  <input id="file" type="file" accept="image/*" />
+  <input type="file" accept="image/*" capture="environment"/>
   <button id="process">Processar</button>
   <span id="status" class="muted"></span>
 
